@@ -5,7 +5,7 @@
 */
 
 body{
-	background: #FFEFDB;}
+	background: #B2DFEE;}
 nav {
 	border: 1px solid #000000;
 }
@@ -15,9 +15,9 @@ h1 {
 	margin: 10px 10px 10px 10px;
 	border: 4px solid #000000;
 	padding: 14px;
-	background: #FA8072;
+	background: #FFC469;
 	-moz-border-radius: 20%;
-	border-radius: 50%;
+	border-radius: 30%;
 }
 
 h2 {
@@ -27,17 +27,16 @@ h2 {
 input[type=submit] {
 	background: #FFC469;
 	-moz-border-radius: 10%;
-	border-radius: 20%;
+	border-radius: 50%;
 }
 
 label {
- 	display: block;
+ 	display: inline-table;
 }
 
 form {
-	background: #FCFFF0;
 	-webkit-box-shadow:
-		inset 10px 10px 84px,
+		inset 10px 10px 84px ,
 		inset -10px -10px 84px;
 	-moz-box-shadow:	
 		inset 10px 10px 84px,
@@ -46,3 +45,20 @@ form {
 		inset 10px 10px 84px,
 		inset -10px -10px 84px;
 }
+fieldset{
+	background: #FCFFF0;
+}
+legend{
+	font-family:"Copperplate Gothic Bold";
+	text-align: center;
+	background: #B2DFEE;
+}
+
+
+
+
+
+
+
+
+
