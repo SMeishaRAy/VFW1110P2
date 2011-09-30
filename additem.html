@@ -1,0 +1,120 @@
+<doctype html>
+<!-- Sharon "Meisha" Ray
+	  Project: Web App Part 1
+	  Term: VFW 1110 -->
+<html>
+	<head>
+				<!-- Meta Tags -->
+				<meta  charset="utf-8" />
+				<meta name = "keywords" content="html5, hotrod shows, car shows, hotrod finder app, mobile development, Full Sail University" />
+				<meta name= "description" content="HotRod Car Show Finder App" />
+				<meta  name = "robots" content="index, follow" />
+				<meta name = "viewport" content="user-scalable=no, width=divice-width" />
+				<meta name="HandheldFriendly" content="true" />
+				<meta name="MobileOptimized" content="320" />
+				
+					<title>Catch-A-HotRod</title>
+			
+						<link rel="stylesheet" href="css/styles.css?=1.0">
+	</head>
+<body>
+
+<!-- My header tags -->
+ 		<header>
+ 			<h1>Catch-A-HotRod</h1>
+ 			<!-- Navigation Tags -->
+				<nav>
+					<ul id="navList">
+						<li><a href = "#">Previous</a></li>
+						<li><a href = "#">Home</a></li>
+						<li><a href = "#">Next</a></li>
+						<li><a href="#">Login</a></li>
+				</ul>
+		</nav>
+
+			<h2>Sign-up to Find HotRod Shows in your Area!</h2>
+	</header>
+
+			<form action ="#" method="post">
+				<fieldset>
+					<legend>Sign-up Information</legend>
+			
+						<ul> <!-- Labels and information boxes -->
+							<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
+							<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
+							<li><label for="email">Email:</label><input type="text" id="email" /></li>
+							<li><label for="username">User Name:</label><input type="text" id="username" />
+							<input type="submit" value="Check Availability" /> </li>
+							<li><label for="pword">Password:</label><input type="password" id="pword" /></li>
+							<li><label for="cpword">Confirm Password(Disabled):</label><input type="password" id="cpword" disabled /></li>
+							<li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
+							<li><label for="location">Zipcode:</label><input type="location" id="zip" /></li>
+						</ul>
+		
+						<ul><!-- input for birthdate-->
+							<li>Enter Birthday: (YYYY-MM-DD)</li>
+								<input type="date" name="user_date" />
+						</ul>
+	
+						<ul><!-- Radio Button Question -->
+							<li>Are you</li> 
+						<ul>
+							<li><input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label></li>
+							<li><input type="radio" value="female" id="female" name="sex"<label for="female">Female</label></li>
+							<li><input type="radio" value="noanswer" id="noanswer" name="sex"<label for="noanswer">Prefer Not to Answer</label></li>
+						</ul>
+				</ul>
+			</fieldset>
+		<fieldset>
+			<legend>More Information</legend>	
+					<ul><!-- My dropdown menu -->
+						<li>Find a Show:</li> 
+			<select id="shows">
+						<ul id="showList">
+							<li><option></option></li>
+							<li><option>Chevy</option></li>
+							<li><option>Corvette</option></li>						
+							<li><option>Camaro 1st, 2nd, &amp; 3rd Gens</option></li>						
+							<li><option>Ford</option></li>				
+							<li><option>Mopar</option></li>
+							<li><option>Tuner</option></li>
+							<li><option>Antique</option></li>
+							<li><option>Classic</option></li>	
+							<li><option>Low-Riders</option></li>
+							<li><option>Lifted-Rides</option></li>
+						</ul>
+					</ul>
+			</select>
+	
+				<!-- This is a slider, but doesn't slide on FireFox. Only shows a text box. Works in Opera and Safari browsers -->
+						<li><label for"rating">On a scale of 1 to 10, how excited are you to find a HotRod Show in your area?</label>
+							<input type="range" min="1" max = "10" name="rating" type="range" />
+						</li>
+				<!-- email updates -->
+						<li>Do you want to receive updates via email?</li>
+							<input type="checkbox" name="yes" value="yes">Yes
+							<input type="checkbox" name = "no" value="no">No
+						</li>
+				<p>If yes, please enter your email address to receive future updates and notices of HotRod shows in your area.</p>
+					<label for="email">Email:</label><input type="text" id="email" />
+			
+				<!-- Text Box for Comments -->	
+			<p>Additional Comments:</p>
+				<textarea rows="5" cols="30">Add comment here!</textarea>
+	</form>
+</fieldset>
+				<!-- Final Submit Button -->
+			<input type="submit" value="Submit" />
+
+			<div id="container">
+				<!-- Stored Data links -->
+					<a href="#">Clear Stored Data</a>  
+					<a href="#">Display Data</a>
+			</div>	
+
+		<footer>
+			<small>&copy 2011 S. Meisha Ray VFW1110</small>
+		</footer>
+			<script href="js/main.js" type = "text/javascript"></script>
+</body>
+</html>

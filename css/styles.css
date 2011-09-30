@@ -1,0 +1,48 @@
+/*CSS Page for Catch-A-HotRod
+	Author: S. Meisha Ray
+	Term: VFW1110
+	Created: September 30, 2011
+*/
+
+body{
+	background: #FFEFDB;}
+nav {
+	border: 1px solid #000000;
+}
+
+h1 {
+	text-align: center;	
+	margin: 10px 10px 10px 10px;
+	border: 4px solid #000000;
+	padding: 14px;
+	background: #FA8072;
+	-moz-border-radius: 20%;
+	border-radius: 50%;
+}
+
+h2 {
+	text-align: center;
+}
+
+input[type=submit] {
+	background: #FFC469;
+	-moz-border-radius: 10%;
+	border-radius: 20%;
+}
+
+label {
+ 	display: block;
+}
+
+form {
+	background: #FCFFF0;
+	-webkit-box-shadow:
+		inset 10px 10px 84px,
+		inset -10px -10px 84px;
+	-moz-box-shadow:	
+		inset 10px 10px 84px,
+		inset -10px -10px 84px;
+	box-shadow:
+		inset 10px 10px 84px,
+		inset -10px -10px 84px;
+}
