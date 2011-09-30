@@ -5,23 +5,42 @@
 */
 
 body{
-	background: #B2DFEE;}
+	background: #B2DFEE;
+	font-family: Arial, serif;
+}
 nav {
 	border: 1px solid #000000;
 }
 
 h1 {
+	font-family: "Handwriting - Dakota";
+	text-shadow: 2px 2px 1px white;
 	text-align: center;	
 	margin: 10px 10px 10px 10px;
 	border: 4px solid #000000;
 	padding: 14px;
 	background: #FFC469;
 	-moz-border-radius: 20%;
-	border-radius: 30%;
+	border-radius: 50%;
 }
 
 h2 {
 	text-align: center;
+}
+
+p{ 
+	color: #00009C;
+	font-style: italic; 
+	font-family: "Times New Roman", serif, Times;
+	font-weight: bold;
+	font: italic bold 16px/1.4em "Times New Roman" ;
+	line-height: 1.4em;
+	letter-spacing: .09em;
+	text-align: left;
+	text-indent:;
+	border:;
+	text-transform:;
+	text-decoration:;
 }
 
 input[type=submit] {
@@ -36,14 +55,14 @@ label {
 
 form {
 	-webkit-box-shadow:
-		inset 10px 10px 84px ,
-		inset -10px -10px 84px;
+		inset 10px 10px 84px  gray,
+		inset -10px -10px 84px gray;
 	-moz-box-shadow:	
-		inset 10px 10px 84px,
-		inset -10px -10px 84px;
+		inset 10px 10px 84px gray,
+		inset -10px -10px 84px gray;
 	box-shadow:
-		inset 10px 10px 84px,
-		inset -10px -10px 84px;
+		inset 10px 10px 84px gray,
+		inset -10px -10px 84px gray;
 }
 fieldset{
 	background: #FCFFF0;
