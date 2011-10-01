@@ -9,7 +9,7 @@
 				<meta name = "keywords" content="html5, hotrod shows, car shows, hotrod finder app, mobile development, Full Sail University" />
 				<meta name= "description" content="HotRod Car Show Finder App" />
 				<meta  name = "robots" content="index, follow" />
-				<meta name = "viewport" content="user-scalable=no, width=divice-width" />
+				<meta name = "viewport" content="user-scalable=no, width=device-width" />
 				<meta name="HandheldFriendly" content="true" />
 				<meta name="MobileOptimized" content="320" />
 				
@@ -24,7 +24,7 @@
  			<h1>Catch-A-HotRod</h1>
  			<!-- Navigation Tags -->
 				<nav>
-					<ul id="navList">
+					<ul id="navlist">
 						<li><a href = "#">Previous</a></li>
 						<li><a href = "#">Home</a></li>
 						<li><a href = "#">Next</a></li>
@@ -35,11 +35,11 @@
 			<h2>Sign-up to Find HotRod Shows in your Area!</h2>
 	</header>
 
-			<form id="myform" action ="#" method="post">
+			<form id="signup" action ="#" method="post">
 				<fieldset id="form1">
 					<legend>Sign-up Information</legend>
 			
-						<ul> <!-- Labels and information boxes -->
+						<ul id="information"> <!-- Labels and information boxes -->
 							<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
 							<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
 							<li><label for="email">Email:</label><input type="text" id="email" /></li>
@@ -51,12 +51,12 @@
 							<li><label for="location">Zipcode:</label><input type="location" id="zip" /></li>
 						</ul>
 		
-						<ul><!-- input for birthdate-->
+						<ul id="birthdate"><!-- input for birthdate-->
 							<li>Enter Birthday: (YYYY-MM-DD)</li>
 								<input type="date" name="user_date" />
 						</ul>
 	
-						<ul><!-- Radio Button Question -->
+						<ul id="radioButton"><!-- Radio Button Question -->
 							<li>Are you</li> 
 						<ul>
 							<li><input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label></li>
@@ -65,7 +65,7 @@
 						</ul>
 				</ul>
 			</fieldset>
-		<fieldset>
+		<fieldset id="form2">
 			<legend>More Information</legend>	
 					<ul><!-- My dropdown menu -->
 						<li>Preferred HotRod Shows:(choose one)</li> 
@@ -74,7 +74,7 @@
 							<li><option></option></li>
 							<li><option>Chevy</option></li>
 							<li><option>Corvette</option></li>						
-							<li><option>Camaro 1st, 2nd, &amp; 3rd Gens</option></li>						
+							<li><option>Camaro</option></li>						
 							<li><option>Ford</option></li>				
 							<li><option>Mopar</option></li>
 							<li><option>Tuner</option></li>
@@ -92,29 +92,28 @@
 						</li>
 				<!-- email updates -->
 						<li>Do you want to receive updates via email?</li>
-							<input type="checkbox" name="yes" value="yes">Yes
-							<input type="checkbox" name = "no" value="no">No
-						</li>
-				<p>If yes, please enter your email address to receive future updates and notices of HotRod shows in your area.</p>
-					<label for="email">Email:</label><input type="text" id="email" />
+							<li><input type="checkbox" name="yes" value="yes" id="yes" class="checkbox" ><label for="yes">Yes</label></li>
+							<li><input type="checkbox" name = "no" value="no" id="no" class="checkbox" ><label for="no">No</label></li>
+				<p id="yesupdates">If yes, please enter your email address to receive future updates and notices of HotRod shows in your area.</p>
+					<li><input type="text" id="email" /><label for="email">Email:</label></li>
 			
 				<!-- Text Box for Comments -->	
-			<p>Additional Comments:</p>
+			<p id="comments">Additional Comments:</p>
 				<textarea rows="5" cols="30">Add comment here!</textarea>
 	</form>
 </fieldset>
 				<!-- Final Submit Button -->
-			<input type="submit" value="Submit" />
+			<input type="submit" value="Submit"  id="submit" />
 
-			<div id="container">
+			<div id="storedData">
 				<!-- Stored Data links -->
-					<a href="#">Clear Stored Data</a>  
-					<a href="#">Display Data</a>
+					<a href="#" id="clear">Clear Stored Data</a>  
+					<a href="#" id="displayLink">Display Data</a>
 			</div>	
 
-		<footer>
+		 <footer id="copyright">
 			<small>&copy 2011 S. Meisha Ray VFW1110</small>
-		</footer>
+		</footer> 
 			<script href="js/main.js" type = "text/javascript"></script>
 </body>
 </html>
