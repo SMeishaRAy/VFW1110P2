@@ -32,18 +32,11 @@ h2{
 }
 #yesupdates{ 
 	color: gray;
-	font-style: italic; 
-	font-family: "Times New Roman", serif, Times;
-	font-weight: bold;
-	font: italic bold 16px/1.4em "Times New Roman" ;
+	font: italic bold 16px/1.4em "Times New Roman";
 	line-height: 1.4em;
 	letter-spacing: .09em;
 	text-align: left;
-	text-indent:;
-	border:;
-	text-transform:;
-	text-decoration:;
-}
+	}
 input[type=submit] {
 	color: red;
 	background: #FFC469;
@@ -69,10 +62,6 @@ label {
 }
 #form2{
 	background:#FCFFF0;
-}
-#birthdate{
-}
-#radioButton{
 }
 legend{
 	color: gray;
