@@ -68,7 +68,32 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 			localStorage.setItem(id, JSON.stringify(item));
 				alert("Thank you. Your Information was Saved!");
-}
+	}
+
+		function getData(){
+			//Write Data rom Local Storage to the browser. 
+			var makeDiv = document.createElement('div');
+			makeDiv.setAttribute("id", "items");
+			var makeList = document.createElement('ul');
+			makeDiv.appendChild(makeList);
+			document.body.appendChild(makeDiv);	
+				for(var i=0; len=localStorage.length; i<len; i++){
+					var makeli = document.createElement('li');
+					makeList.appendChild(makeli);
+					var key = localStorage.key(i);
+					var value = localStorage.getItem(key);
+					//convert the string from local storage value back to an object by using JSON.parse().
+					var obj = JSON.parse(value);
+					var makeSubList = document.createElement('ul');
+					makeli.appendChild(makeSubList);
+					for(var n in obj){
+						var makeSubLi = document.creteElement('li');
+						makeSubList.appendChild(makeSubLi);
+						var optSubText = obj[n][0]+" "+obj[n][1];
+						makeSubli.innerHTML = optSubText;
+			}
+		}
+	}
 
 	//Default Vars
 	var showList = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
@@ -78,10 +103,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	makeCats();
 	
 	// Set Link & Submit Click 
-		/*var displayLink = $("displayLink");
+		var displayLink = $("displayLink");
 			displayLink.addEventListener("click", getData);
-		var clearLink = $("clear");
-			clearLink.addEventListener("click", clearLocal);*/
+		//var clearLink = $("clear");
+			//clearLink.addEventListener("click", clearLocal);
 		//Save Data function
 		var save = $("submit");
 			save.addEventListener("click", storeData);
