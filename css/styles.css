@@ -18,7 +18,7 @@ body{
 	display: inline;
 }
 #navlist li a{ 
-	color:#444;
+	color: #444444;
 	text-decoration: none;
 }
 #navlist li a:hover{
@@ -37,12 +37,12 @@ h1 {
 	border-radius: 50%;
 }
 h2{
-	color:gray;
+	color: #444444;
 	font-family: "Helvetica Neue";
 	text-align: center;
 }
 #yesupdates{ 
-	color: gray;
+	color: #444444;
 	font: italic bold 16px/1.4em "Times New Roman";
 	line-height: 1.4em;
 	letter-spacing: .09em;
@@ -60,13 +60,13 @@ label {
 #signup{
 	-webkit-box-shadow:
 		inset 10px 10px 84px  gray,
-		inset -10px -10px 84px gray;
+		inset -10px -10px 84px #444444;
 	-moz-box-shadow:	
 		inset 10px 10px 84px gray,
-		inset -10px -10px 84px gray;
+		inset -10px -10px 84px #444444;
 	box-shadow:
 		inset 10px 10px 84px gray,
-		inset -10px -10px 84px gray;
+		inset -10px -10px 84px #444444;
 }
 #form1{
 	background: #FCFFF0;
