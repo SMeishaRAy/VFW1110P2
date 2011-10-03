@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	//create select field element and populate options.
-		functions makeCats(){
+		function makeCats(){
 			var formTag = document.getElementsByTagName("form"),//formTag is an array of all form tags.
 				selectLi = $('select'),
 				makeSelect = document.createElement('select');
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	//Find value of selected radio button.
-	function getSelectedRadio(){
+		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
 			for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
-	function getCheckBoxValue(){
+		function getCheckBoxValue(){
 		if($('updates').checked){
 			updateValue = $('updates').value;
 		}else{
@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
-	function toggleControls(n){
+		function toggleControls(n){
 		switch(n){
 			case "on":
 				$('form').style.display = "none";
@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	)
 	
-	function storeData(){
+		function storeData(){
 			var id 			= Math.floor(Math.radom()*10000001);
 			//Gather up all of form field varlues and store in an object.
 			//Object properties contain an array with the form label and input values.
