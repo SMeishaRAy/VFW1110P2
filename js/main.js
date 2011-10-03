@@ -92,6 +92,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 		function getData(){
 			toggleControls("on");
+				if(localStorage.length === 0){
+					alert("There is no data in local storage.");
+				}
 			//Write Data rom Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
