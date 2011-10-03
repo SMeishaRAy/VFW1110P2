@@ -117,6 +117,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
+
+		function clearLocal(){
+			if(localStorage.length === 0){
+				alert("There is no data to clear.");
+			}else{
+				localStorage.clear();
+				alert("All data is removed!");
+				window.location.reload();
+				return false;
+		}
+	}
 	//Default Vars
 	var showList = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
 		sexValue;
@@ -127,8 +138,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	// Set Link & Submit Click 
 		var displayLink = $("displayLink");
 			displayLink.addEventListener("click", getData);
-		//var clearLink = $("clear");
-			//clearLink.addEventListener("click", clearLocal);
+		var clearLink = $("clear");
+			clearLink.addEventListener("click", clearLocal);
 		//Save Data function
 		var save = $("submit");
 			save.addEventListener("click", storeData);
