@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		function $(x){
 			var theElement = document.getElementbyId(x);
 				return theElement;
-}
+	}
 
 	//create select field element and populate options.
 		functions makeCats(){
@@ -47,6 +47,20 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
+	function toggleControls(n{
+		switch(n){
+			case "on":
+				$('form').style.display = "none";
+				$('clear').style.display = "inline";
+				break;
+			case "off":
+			
+				break;
+			default:
+				return false;
+		}
+	)
+	
 	function storeData(){
 			var id 			= Math.floor(Math.radom()*10000001);
 			//Gather up all of form field varlues and store in an object.
@@ -54,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			getSelectedRadio();
 			getCheckedboxValue();
 			var item		= {};
-				item.group 	= ["Group:", $('groups').value];
+				item.signup = ["Information:", $('signup').value];
 				item.fname  = ["First Name:", $('fname').value];
 				item.lname  = ["Last Name:", $('lname').value];
 				item.email  = ["Email:", $('email').value];
