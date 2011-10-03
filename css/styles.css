@@ -5,17 +5,25 @@
 */
 
 body{
-	background: url(images/catch_a_hotrod.jpg) no-repeat;
-	font-family: Arial, serif;
+	background: url(http://smeisharay.github.com/VFW1110P2/images/catch_a_hotrod.jpg) repeat;
+	font-family: Helvetica, Arial, serif;
 }
 #navlist{
+	height: 20px
 	list-style-type: none;
 	margin:5;
 	padding:5;
 }
+#navlist li{
+	display: inline;
+}
+#navlist li a{ 
+	color:#444;
+	text-decoration: none;
+}
 h1 {
 	color: red;
-	font-family: "Handwriting - Dakota";
+	font-family: Helvetica;
 	text-shadow: 2px 2px 1px white;
 	text-align: center;	
 	margin: 10px 10px 10px 10px;
