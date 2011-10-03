@@ -47,14 +47,20 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
-	function toggleControls(n{
+	function toggleControls(n){
 		switch(n){
 			case "on":
 				$('form').style.display = "none";
 				$('clear').style.display = "inline";
+				$('displayLink').style.display = "none";
+				$('addNew').style.display = "inline";
 				break;
 			case "off":
-			
+				$('form').style.display = "block";
+				$('clear').style.display = "inline";
+				$('displayLink').style.display = "inline";
+				$('addNew').style.display = "none";
+				$('items').style.display = "none";
 				break;
 			default:
 				return false;
@@ -85,12 +91,14 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 		function getData(){
+			toggleControls("on");
 			//Write Data rom Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
 			var makeList = document.createElement('ul');
 			makeDiv.appendChild(makeList);
 			document.body.appendChild(makeDiv);	
+			$('items').style.display = "block";
 				for(var i=0; len=localStorage.length; i<len; i++){
 					var makeli = document.createElement('li');
 					makeList.appendChild(makeli);
