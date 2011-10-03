@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//get element by id function.
 		function $(x){
 			var theElement = document.getElementbyId(x);
-				return theElement;
+		return theElement;
 	}
 
 	//create select field element and populate options.
@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 			selectLi.appendChild(makeSelect);
 	}
-
 	//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
@@ -38,7 +37,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	}
-	
 		function getCheckBoxValue(){
 		if($('updates').checked){
 			updateValue = $('updates').value;
@@ -46,7 +44,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			updateValue = "No"
 		}
 	}
-	
 		function toggleControls(n){
 		switch(n){
 			case "on":
@@ -66,7 +63,6 @@ window.addEventListener("DOMContentLoaded", function(){
 				return false;
 		}
 	)
-	
 		function storeData(){
 			var id 			= Math.floor(Math.radom()*10000001);
 			//Gather up all of form field varlues and store in an object.
@@ -119,8 +115,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	}
-
-
 		function clearLocal(){
 			if(localStorage.length === 0){
 				alert("There is no data to clear.");
@@ -132,20 +126,19 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	//Default Vars
-	var showList = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
-		sexValue;
-		updateValue = "No"
-	;
-	makeCats();
+			var showList = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
+			sexValue;
+			updateValue = "No";
+			makeCats();
 	
 	// Set Link & Submit Click 
-		var displayLink = $("displayLink");
-			displayLink.addEventListener("click", getData);
-		var clearLink = $("clear");
-			clearLink.addEventListener("click", clearLocal);
-		//Save Data function
-		var save = $("submit");
-			save.addEventListener("click", storeData);
+			var displayLink = $("displayLink");
+				displayLink.addEventListener("click", getData);
+			var clearLink = $("clear");
+				clearLink.addEventListener("click", clearLocal);
+			//Save Data function
+			var save = $("submit");
+				save.addEventListener("click", storeData);
 
 });
 
