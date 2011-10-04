@@ -1,6 +1,6 @@
 /*JS page for Catch-A-HotRod
 	Author: S. Meisha Ray
-	Term: VFW1110
+	Term: VFW1110 Project 2
 	Created: September 30, 2011
 */
 
@@ -19,9 +19,9 @@ window.addEventListener("DOMContentLoaded", function(){
 				selectLi = $('select'),
 				makeSelect = document.createElement('select');
 				makeSelect.setAttribute("id", "groups");
-			for(var i = 0, j = showList.length; i<j; i++){
+			for(var i = 0, j = shows.length; i<j; i++){
 				var makeOption = document.createElement('option');
-					var optText = showList[i];
+					var optText = shows[i];
 					makeOption.setAttribute("value", optText);
 					makeOption.innerHTML = optText;
 					makeSelect.appendChild(makeOption);
@@ -126,7 +126,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	//Default Vars
-			var showList = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
+			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
 			sexValue;
 			updateValue = "No";
 			makeCats();
