@@ -111,6 +111,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	}
+		
 		function clearLocal(){
 			if(localStorage.length === 0){
 				alert("There is no data to clear.");
@@ -122,6 +123,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
+		//localStorage
 		Storage.prototype.setObject = function(key, value){
 			this.setItem(key, JSON.stringify(value));
 		}
@@ -130,7 +132,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			return JSON.parse(this.getItem(key));
 		}
 	
-	//Default Vars
+	//Default Vars for my list of shows.
 			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
 			sexValue;
 			updateValue = "No";
