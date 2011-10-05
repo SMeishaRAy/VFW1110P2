@@ -12,7 +12,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			var theElement = document.getElementbyId(x);
 		return theElement;
 	}
-
 	//create select field element and populate options.
 		function makeCats(){
 			var formTag = document.getElementsByTagName("form"),//formTag is an array of all form tags.
@@ -79,13 +78,10 @@ window.addEventListener("DOMContentLoaded", function(){
 				item.updates = ["Updates:", updateValue];
 				item.rating	= ["Rating:", $('rating').value];
 				item.notes	= ["Comments:" $('comments').value];
-				
-		//Save data into Local Storage: Use Stringify to convert our object to a string.
-		
+			//Save data into Local Storage: Use Stringify to convert our object to a string.
 			localStorage.setItem(id, JSON.stringify(item));
 				alert("Thank you. Your Information was Saved!");
 	}
-
 		function getData(){
 			toggleControls("on");
 				if(localStorage.length === 0){
@@ -130,7 +126,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			sexValue;
 			updateValue = "No";
 			makeCats();
-	
 	// Set Link & Submit Click 
 			var displayLink = $("displayLink");
 				displayLink.addEventListener("click", getData);
@@ -139,7 +134,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			//Save Data function
 			var save = $("submit");
 				save.addEventListener("click", storeData);
-
 });
 
 
