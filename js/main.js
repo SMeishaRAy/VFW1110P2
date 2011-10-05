@@ -7,13 +7,13 @@
 //DOM - method when the dom has loaded it will run this function.
 window.addEventListener("DOMContentLoaded", function(){
 	
-	//get element by id function.
+	//get element by id function. shortcut
 		function $(x){
 			var theElement = document.getElementbyId(x);
-		return theElement;
-	}
+			return theElement;
+		}
 	//create select field element and populate options.
-		function makeCats(){
+		function makeList(){
 			var formTag = document.getElementsByTagName("form"),//formTag is an array of all form tags.
 				selectLi = $('select'),
 				makeSelect = document.createElement('select');
@@ -121,11 +121,20 @@ window.addEventListener("DOMContentLoaded", function(){
 				return false;
 		}
 	}
+	
+		Storage.prototype.setObject = function(key, value){
+			this.setItem(key, JSON.stringify(value));
+		}
+		
+		Storage.prototype.getObject = function(key){
+			return JSON.parse(this.getItem(key));
+		}
+	
 	//Default Vars
 			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
 			sexValue;
 			updateValue = "No";
-			makeCats();
+			makeList();
 	// Set Link & Submit Click 
 			var displayLink = $("displayLink");
 				displayLink.addEventListener("click", getData);

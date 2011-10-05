@@ -39,26 +39,26 @@
 				<legend>Sign-up Information</legend>
 					<!-- Labels and information boxes -->
 				<ul id="information"> 
-					<li id="select"><label for="fname">First Name:</label>
+					<li id="select"><label for="fname">*First Name:</label>
 						<input type="text" id="fname" /></li>
-					<li><label for="lname">Last Name:</label>
+					<li><label for="lname">*Last Name:</label>
 						<input type="text" id="lname" /></li>
-					<li><label for="email">Email:</label>
+					<li><label for="email">*Email:</label>
 						<input type="email" id="email" /></li>
-					<li><label for="username">User Name:</label>
+					<li><label for="username">*User Name:</label>
 						<input type="text" id="username" />
 					<!-- my submit button to use eventually <input type="submit" value="Check Availability" id="available" /></li>-->
-					<li><label for="password">Password:</label>
+					<li><label for="password">*Password:</label>
 						<input type="password" id="pword" /></li>
-					<li><label for="cpword">Confirm Password(Disabled):</label>
-						<input type="text" id="cpword" disabled /></li>
-					<li><label for="tel">Phone Number:</label>
+					<li><label for="cpword">*Confirm Password:</label>
+						<input type="text" id="cpword" /></li>
+					<li><label for="tel">*Phone Number:</label>
 						<input type="tel" id="tel" /></li>
-					<li><label for="location">Zipcode:</label>
+					<li><label for="location">*Zipcode:</label>
 						<input type="text" id="location" /></li>
 				</ul>
 				<ul id="birthdate"><!-- input for birthdate-->
-					<li>Enter Birthday: (YYYY-MM-DD)</li>
+					<li>*Enter Birthday: (YYYY-MM-DD)</li>
 						<input type="date" name="user_date" />
 				</ul>
 				<ul id="radios"><!-- Radio Button Question -->
@@ -76,7 +76,7 @@
 				<li>
 					<label for ="Preferred HotRod Shows(choose one)"></label> 
 						<select id="shows">
-							<optgroup label="Choose One">
+							<optgroup label="Choose One" id = "makeList">
 								<option>Chevy</option>
 								<option>Corvette</option>						
 								<option>Camaro</option>						
