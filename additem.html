@@ -13,11 +13,12 @@
 		<meta name="HandheldFriendly" content="true" />
 		<meta name="MobileOptimized" content="320" />
 		<title>Catch-A-HotRod</title>
-			<link rel="stylesheet" href="css/styles.css?=1.0">
+		<link rel="stylesheet" href="css/styles.css?=1.0">
+		
 	</head>
 	<body>
 <!-- My header tags -->
- 		<header>
+		<header> 
  			<hgroup>
  				<h1>Catch-A-HotRod</h1>
  				<h2>Sign-up to Find HotRod Shows in your Area!</h2>
@@ -34,42 +35,42 @@
 			</ul>
 		</nav>
 		<!-- My form -->
-		<form id="signup" action ="#" method="post">
-			<fieldset id="form1">
+	<form id="signup" action ="#" method="post">
+		<fieldset id="form1">
 				<legend>Sign-up Information</legend>
-					<!-- Labels and information boxes -->
-				<ul id="information"> 
+			
+						<ul id="information"> 
 					<li id="select"><label for="fname">*First Name:</label>
 						<input type="text" id="fname" /></li>
-					<li><label for="lname">*Last Name:</label>
+				<li><label for="lname">*Last Name:</label>
 						<input type="text" id="lname" /></li>
-					<li><label for="email">*Email:</label>
+						<li><label for="email">*Email:</label>
 						<input type="email" id="email" /></li>
 					<li><label for="username">*User Name:</label>
 						<input type="text" id="username" />
-					<!-- my submit button to use eventually <input type="submit" value="Check Availability" id="available" /></li>-->
-					<li><label for="password">*Password:</label>
+					
+			<li><label for="password">*Password:</label>
 						<input type="password" id="pword" /></li>
 					<li><label for="cpword">*Confirm Password:</label>
 						<input type="text" id="cpword" /></li>
-					<li><label for="tel">*Phone Number:</label>
+		<!--					<li><label for="tel">*Phone Number:</label>
 						<input type="tel" id="tel" /></li>
-					<li><label for="location">*Zipcode:</label>
+		-->				<li><label for="location">*Zipcode:</label>
 						<input type="text" id="location" /></li>
 				</ul>
-				<ul id="birthdate"><!-- input for birthdate-->
+				<ul id="birthdate">
 					<li>*Enter Birthday: (YYYY-MM-DD)</li>
 						<input type="date" name="user_date" />
 				</ul>
-				<ul id="radios"><!-- Radio Button Question -->
-					<li id="sex">Are you</li> 
+				<ul id="radios">
+						<li id="sex">Are you</li> 
 				<ul>
 					<li><input type="radio" value="male" id="male" name="sex" /><label for="male">Male</label></li>
 					<li><input type="radio" value="female" id="female" name="sex"<label for="female">Female</label></li>
 					<li><input type="radio" value="noanswer" id="noanswer" name="sex"<label for="noanswer">Prefer Not to Answer</label></li>
 				</ul>
-				</ul>
-			</fieldset>
+			</ul>
+			</fieldset>	
 			<fieldset id="form2">
 				<legend>More Information</legend>	
 					<!-- My dropdown menu -->
@@ -92,12 +93,12 @@
 				</li>
 				<!-- This is a slider, but doesn't slide on FireFox. Only shows a text box. Works in Opera and Safari browsers -->
 				<li><label for"rating">On a scale of 1 to 10, how excited are you to find a HotRod Show in your area?</label>
-					<input type="range" min="1" max = "10" name="rating" type="range" />
+					<input type="range" min="1" max = "10" id="rating" name="rating" type="range" />
 				</li>
 				<!-- email updates -->
-				<li>Do you want to receive updates via email?</li>
-				<li><input type="checkbox" name="yes" value="yes" id="checkbox" class="checkbox" ><label for="yes">Yes</label></li>
-				<li><input type="checkbox" name = "no" value="no" id="checkbox" class="checkbox" ><label for="no">No</label></li>
+				<li><input type="checkbox" name="yes" value="yes" id="checkbox" class="checkbox" >  Do you want to receive updates via email?</li>
+
+				<!--<li><input type="checkbox" name ="yes" value="no" id="checkbox" class="checkbox" ><label for="no">No</label></li> -->
 				<p id="yesupdates">If yes, please enter your email address to receive future updates and notices of HotRod shows in your area.</p>
 				<li><input type="text" id="email" /><label for="email">Email:</label></li>
 			
@@ -107,18 +108,18 @@
 			</fieldset>
 		</form>
 				<!-- Final Submit Button -->
-		<input type="submit" value="Submit"  id="submit" />
+		<input type="submit" value="submit"  id="submit" />
 
 		<div id="storedData">
 			<!-- Stored Data links -->
 			<a href="#" id="clear">Clear Stored Data</a>  
 			<a href="#" id="displayLink">Display Data</a>
-			<a href="#" id="addNew" style="display:none;">Add New Item</a><!--will not desplay a link.-->
+			<a href="additem.html" id="addNew" style="display:none;">Add New Item</a><!--will not desplay a link.-->
 		</div>	
 
 		 <footer id="copyright">
 			<small>&copy 2011 S. Meisha Ray VFW1110 | <a href = "#">Terms &amp; Conditions</a> | <a href="#">Help</a></small>
 		</footer> 
-		<script href="js/main.js" type = "text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>
 </html>

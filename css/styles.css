@@ -27,7 +27,7 @@ h2{
 }
 #navlist{
 	height: 15px
-	list-style-type: none;
+	list-style-type: auto;
 	margin:5;
 	padding:5;
 }
