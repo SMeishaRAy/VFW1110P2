@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
-			var	shows = $('select');
+			var	selectLi = $('select');
 			var makeSelect = document.createElement('select');
 				makeSelect.setAttribute("id", "groups");
 			for(var i = 0, j = shows.length; i<j; i++){
@@ -26,8 +26,10 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeOption.setAttribute("value", optText);
 					makeOption.innerHTML = optText;
 					makeSelect.appendChild(makeOption);
+					}
+				}
 		}
-			shows.appendChild(makeSelect);
+			selectLi.appendChild(makeSelect);
 	}
 	
 		//Find value of selected radio button.
@@ -36,6 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
 		var sexValue = radios[i].value;
+				}
 			}
 		}
 	}
@@ -44,6 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			//updateValue = $('checkbox').value;
 		}else{
 			//updateValue = "No";
+			}
 		}
 	}
 		function toggleControls(n){
@@ -63,6 +67,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				break;
 			default:
 				return false;
+			}
 		}
 	}
 		function storeData(){
@@ -81,12 +86,14 @@ window.addEventListener("DOMContentLoaded", function () {
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
 			localStorage.setItem(id, JSON.stringify(item));
 				alert("Thank you. Your Information was Saved!");
+		}
 	}
 		function getData(){
 			toggleControls("on");
 				if(localStorage.length === 0){
 					alert("There is no data in local storage.");
-				}
+		}
+	}
 			//Write Data rom Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
@@ -120,6 +127,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				alert("All data has been removed from local storage!");
 				window.location.reload();
 				return false;
+			}
 		}
 	}	
 		//My default variables
