@@ -28,12 +28,12 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeSelect.appendChild(makeOption);
 					// Default Vars for my list of shows.
 			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-			makeList();
+			
 		}
 			selectLi.appendChild(makeSelect);
 	}
-	
-	//Find value of selected radio button.
+	makeList();
+		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
 			for(var i=0; i<radios.length; i++){
