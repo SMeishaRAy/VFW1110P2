@@ -69,12 +69,6 @@ label {
 		inset 10px 10px 84px gray,
 		inset -10px -10px 84px #444444;
 }
-#form1{
-	background: #FCFFF0;
-}
-#form2{
-	background:#FCFFF0;
-}
 legend{
 	color: gray;
 	font-family:"Copperplate Gothic Bold";

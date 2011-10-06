@@ -6,20 +6,14 @@
 
 //DOM - method when the dom has loaded it will run this function.
 window.addEventListener("DOMContentLoaded", function () { 
-alert("Test Test");
-	
-
 
 	//get element by id function. shortcut
-		function $(x){
-			var theElement = document.getElementById(x);
-			return theElement;
+	function $(x){
+		var theElement = document.getElementById(x);
+		return theElement;
 			
-		}
+	}
 		
-
-
-
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
@@ -40,15 +34,15 @@ alert("Test Test");
 		var radios = document.forms[0].sex;
 			for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
-				sexValue = radios[i].value;
+				//sexValue = radios[i].value;
 			}
 		}
 	}
 		function getCheckBoxValue(){
 		if($('checkbox').checked){
-			updateValue = $('checkbox').value;
+			//updateValue = $('checkbox').value;
 		}else{
-			updateValue = "No";
+			//updateValue = "No";
 		}
 	}
 		function toggleControls(n){
@@ -77,13 +71,10 @@ alert("Test Test");
 			getSelectedRadio();
 			getCheckBoxValue();
 			var item		= {};
-				item.signup = ["Information:", $('signup').value];
 				item.fname  = ["First Name:", $('fname').value];
 				item.lname  = ["Last Name:", $('lname').value];
 				item.email  = ["Email:", $('email').value];
 				item.user 	= ["UserName:", $('username').value];
-				// item.sex	= ["Sex:", sexValue];
-				item.updates = ["Updates:", updateValue];
 				item.rating	= ["Rating:", $('rating').value];
 				item.notes	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
@@ -125,25 +116,13 @@ alert("Test Test");
 				alert("There is no data to clear.");
 			}else{
 				localStorage.clear();
-				alert("All data is removed!");
+				alert("All data has been removed from local storage!");
 				window.location.reload();
 				return false;
 		}
-	}
-	
-		/* localStorage
-		Storage.prototype.setObject = function(key, value){
-			this.setItem(key, JSON.stringify(value));
-		}
-		
-		Storage.prototype.getObject = function(key){
-			return JSON.parse(this.getItem(key));
-		} */
-	
+	}	
 	// Default Vars for my list of shows.
 			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-			//sexValue();
-			updateValue = "No";
 			makeList();
 	// Set Link & Submit Click 
 			var displayLink = $('displayLink');
