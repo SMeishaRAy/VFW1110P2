@@ -49,6 +49,12 @@ h2{
 	letter-spacing: .09em;
 	text-align: left;
 }
+#signup {
+	color: gray;
+	background: #FFC469;
+	-moz-border-radius: 15%;
+	border-radius: 50%;
+}
 input[type=submit] {
 	color: gray;
 	background: #FFC469;
