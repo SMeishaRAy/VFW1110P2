@@ -1,7 +1,7 @@
 /*JS page for Catch-A-HotRod
 	Author: S. Meisha Ray
-	Term: VFW1110 Project 2
-	Created: September 30, 2011
+	Term: VFW1110 Project 2 web app part 2
+	Created: October 6, 2011
 */
 
 //DOM - method when the dom has loaded it will run this function.
@@ -44,14 +44,14 @@ window.addEventListener("DOMContentLoaded", function () {
 			updateValue = "No";
 		}
 	}
-		function is_it_checked(){
+		/*function is_it_checked(){
 			var y_n = document.getElementById("yes_no");
 			if (y_n.checked){
 			alert("Yes, The box is checked!");
 			}else{
 			alert("No, the box is not checked!");
 		}
-	}
+	}*/
 		function toggleControls(n){
 		switch(n){
 			case "on":
