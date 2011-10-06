@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		}	
 		//My default variables
 		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-		sexValue;
+		var sexValue;
 		makeList();
 		
 		// Set Link & Submit Click 
