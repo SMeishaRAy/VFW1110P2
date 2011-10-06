@@ -12,6 +12,12 @@ window.addEventListener("DOMContentLoaded", function () {
 		var theElement = document.getElementById(x);
 		return theElement;	
 	} 	
+	
+	//Default variables
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		var sexValue;
+		var updateValue = "no";
+		
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
@@ -120,9 +126,8 @@ window.addEventListener("DOMContentLoaded", function () {
 		
 		function clearLocal(){
 			if(localStorage.length === 0){
-				alert("Sorry! There is no data to clear.");
-			}
-			else{
+				alert("There is no data to clear.");
+			}else{
 				localStorage.clear();
 				alert("All data has been removed from local storage!");
 				window.location.reload();
@@ -130,31 +135,17 @@ window.addEventListener("DOMContentLoaded", function () {
 			}
 		}	
 		
-		//Default variables - creates the dropdown menu!
-			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"],
-				sexValue;
-				updateValue = "no";			
-			makeList();
-			//Save Data function
-				var save = $('submit');
-				save.addEventListener("click", storeData);
-					
-		// Display data 
+		makeList();
+		
+		// Set Link & Submit Click 
 			var displayLink = $('displayLink');
-			displayLink.addEventListener("click", getData);		
+			displayLink.addEventListener("click", getData);//execute a getData function
 			
-			//Clears all data!
 			var clearLink = $('clear');
 			clearLink.addEventListener("click", clearLocal);//clears all data
 			
-			
-			/*Sign up - function does not work for now.
-			var signup = $("signup");
-			signup.addEventListener("click", getSignup);
-			
-			//Login - function does not work for now.
-			var login = $("login");
-			login.addEventListener("click", logIn);*/
+			var save = $('submit');
+			save.addEventListener("click", storeData);//Save Data function
 			
 });	
 
