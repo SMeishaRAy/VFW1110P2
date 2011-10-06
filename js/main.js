@@ -12,6 +12,12 @@ window.addEventListener("DOMContentLoaded", function () {
 		var theElement = document.getElementById(x);
 		return theElement;	
 	} 	
+	
+	//MyGlobal variables
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		var sexValue;
+		var updateValue = "no";
+		
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
@@ -91,7 +97,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			toggleControls("on");
 				if(localStorage.length === 0){
 					alert("There is no data in local storage.");
-	}
+					}
 			//Write Data from Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
@@ -127,19 +133,18 @@ window.addEventListener("DOMContentLoaded", function () {
 				return false;
 			}
 		}	
-		//My default variables
-		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-		var sexValue;
+		
 		makeList();
 		
 		// Set Link & Submit Click 
 			var displayLink = $('displayLink');
 			displayLink.addEventListener("click", getData);//execute a getData function
+			
 			var clearLink = $('clear');
 			clearLink.addEventListener("click", clearLocal);//clears all data
-			//Save Data function
+			
 			var save = $("submit");
-			save.addEventListener("click", storeData);
+			save.addEventListener("click", storeData);//Save Data function
 			
 });	
 
