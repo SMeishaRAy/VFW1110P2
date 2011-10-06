@@ -6,6 +6,7 @@
 
 //DOM - method when the dom has loaded it will run this function.
 window.addEventListener("DOMContentLoaded", function () { 
+	
 
 	//get element by id function. shortcut
 	function $(x){
@@ -14,8 +15,8 @@ window.addEventListener("DOMContentLoaded", function () {
 	} 	
 	
 	//Default variables
-		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
-		var sexValue,
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		var	sexValue;
 		var updateValue = "No";
 		
 	//create select field element and populate options.
@@ -88,11 +89,9 @@ window.addEventListener("DOMContentLoaded", function () {
 				item.fname  	= ["Full Name:", $('fname').value];
 				item.email  	= ["Email:", $('email').value];
 				item.userName 	= ["UserName:", $('username').value];
-				item.bday		= ["Birthdate:", $('bday').value;]
-
+				item.bday		= ["Birthdate:", $('bday').value];
 				item.sex		= ["Sex:", sexValue];
 				item.updates	= ["Email Updates", updatesValue];
-				
 				item.rating		= ["Rating:", $('rating').value];
 				item.comments	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
