@@ -10,17 +10,15 @@ window.addEventListener("DOMContentLoaded", function () {
 	//get element by id function. shortcut
 	function $(x){
 		var theElement = document.getElementById(x);
-		return theElement;
-			
-	}
-		
+		return theElement;	
+	} 	
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
 			var	selectLi = $('select');
 			var makeSelect = document.createElement('select');
 				makeSelect.setAttribute("id", "groups");
-			for(var i = 0, j = shows.length; i<j; i++){
+		for(var i = 0, j = shows.length; i<j; i++){
 				var makeOption = document.createElement('option');
 					var optText = shows[i];
 					makeOption.setAttribute("value", optText);
@@ -29,7 +27,6 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 			selectLi.appendChild(makeSelect);
 	}
-	
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
@@ -66,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 		function storeData(){
-			var id 			= Math.floor(Math.random()*1000001);//local storage
+			var id 			= Math.floor(Math.random()*10900001);//local storage
 			//Gather up all of form field values and store in an object.
 			//Object properties contain an array with the form label and input values.
 			getSelectedRadio();
