@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	}
 		//Checking to make that the name field was not left blank.
 		function checkIt(){
-			var theName = document.getElementById("fname").value;
+			var theName = document.getElementById().value;
 				if(theName.length < 1) {
 					window.alert("Please enter your first name.");
 					return false; 
