@@ -45,8 +45,8 @@ h2{
 #SignupLink a{
 	color: gray;
 	background: #FFC469;
-	border: 4px solid gray;
-		-moz-border-radius: 35%;
+	border: 1px solid gray;
+	-moz-border-radius: 35%;
 	border-radius: 50%;
 }
 input[type=submit] {
