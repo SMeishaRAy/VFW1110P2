@@ -27,16 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 			selectLi.appendChild(makeSelect);
 	}
-		/*Checking to make that the name field was not left blank.
-		function checkIt(){
-			var theName = document.getElementById("signup").value;
-				if(theName.length < 1) {
-					window.alert("Please enter your first name.");
-					return false; 
-				}else{
-					return true;
-			}
-		}*/
+		
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
@@ -46,14 +37,13 @@ window.addEventListener("DOMContentLoaded", function () {
 			}
 		}
 	}
-		/*function getCheckBoxValue(){
+		function getCheckBoxValue(){
 		if($('checkbox').checked){
-			//updateValue = $('checkbox').value;
+			updateValue = $('checkbox').value;
 		}else{
-			//updateValue = "No";
+			updateValue = "No";
 		}
-	}*/
-	
+	}
 		function is_it_checked(){
 			var y_n = document.getElementById("yes_no");
 			if (y_n.checked){
@@ -62,7 +52,6 @@ window.addEventListener("DOMContentLoaded", function () {
 			alert("No, the box is not checked!");
 			}
 		}
-		
 		function toggleControls(n){
 		switch(n){
 			case "on":
@@ -115,7 +104,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeList.appendChild(makeli);
 					var key = localStorage.key(i);
 					var value = localStorage.getItem(key);
-					//convert the string from local storage value back to an object by using JSON.parse().
+				//convert the string from local storage value back to an object by using JSON.parse().
 					var obj = JSON.parse(value);
 					var makeSubList = document.createElement('ul');
 					makeli.appendChild(makeSubList);
@@ -140,6 +129,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	}	
 		//My default variables
 		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		sexValue;
 		makeList();
 		// Set Link & Submit Click 
 			var displayLink = $('displayLink');

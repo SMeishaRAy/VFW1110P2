@@ -9,7 +9,7 @@ body{
 	font-family: Helvetica, Arial, serif;
 }
 h1 {
-	color: red;
+	color: gray;
 	font-family: Helvetica;
 	text-shadow: 2px 2px 1px white;
 	text-align: center;	
@@ -50,7 +50,7 @@ h2{
 	text-align: left;
 }
 input[type=submit] {
-	color: red;
+	color: gray;
 	background: #FFC469;
 	-moz-border-radius: 15%;
 	border-radius: 50%;

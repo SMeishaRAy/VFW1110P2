@@ -34,54 +34,46 @@
 			</ul>
 		</nav>
 		<!-- My form -->
-	<form id="signup" action ="#" method="post">
+	<form id="signup" action ="#">
 		<fieldset id="form">
 			<legend>Please Fill out form below and submit</legend>	
 		<ul id="information"> 
-			<li><label for="fname">Full Name:</label>
-				<input type="text" id="fname" /></li>
-			<li><label for="email">My Email Address is:</label>
-				<input type="email" id="email" /></li>
-			<li><label for="username">Desired UserName:</label>
-				<input type="text" id="username" />
-			<li><label for="password">Choose a Password:</label>
-				<input type="password" id="pword" /></li>
-			<li><label for="cpword">Confirm Password:</label>
-				<input type="text" id="cpword" disabled/></li>
-			<li><label for="location">Zipcode:</label>
-				<input type="text" id="location" /></li>
+			<li><label for="fname">Full Name:</label><input type="text" id="fname" /></li>
+			<li><label for="email">My Email Address is:</label><input type="email" id="email" /></li>
+			<li><label for="username">Desired UserName:</label><input type="text" id="username" />
+			<li><label for="password">Choose a Password:</label><input type="password" id="pword" /></li>
+			<li><label for="cpword">Confirm Password:</label><input type="text" id="cpword" disabled/></li>
 		</ul>
 		<ul id="birthdate">
 			<li><label for ="bday">Enter Birthday: (YYYY-MM-DD)</label></li>
 				<input type="date" name="user_date" />
 		</ul>
 		<ul id="radios">
-			<li id="sex">Are you</li> 
+			<li id="sex">Are you a </li> 
 			<ul>
-				<li><input type="radio" value="male" id="male" name="sex" /><label for="male">Male</label></li>
-				<li><input type="radio" value="female" id="female" name="sex"<label for="female">Female</label></li>
+				<li><input type="radio" value="male" id="male" name="sex" /><label for="male">Boy</label></li>
+				<li><input type="radio" value="female" id="female" name="sex"<label for="female">Girl</label></li>
 			</ul>
 		</ul>
 			<!-- My dropdown menu -->
 			<ul>
 				<li id="select">
-					<label for ="dropdown">Select a Show:</label> 
+					<label for ="dropdown">Select a HotRod Show:</label> 
 				</li>
-				</ul>
-				<ul>
-				<!-- This is a slider, but doesn't slide on FireFox. Only shows a text box. Works in Opera and Safari browsers -->
-					<li><label for="rating">On a scale of 1 to 10, how excited are you to find a HotRod Show in your area?</label>
-					<input type="range" min="1" max = "10" id="rating" name="rating" type="range" />
-					</li>
-				</ul>
-				<ul>
+			</ul>
+			<ul>
+			<!-- This is a slider, but doesn't slide on FireFox. Only shows a text box. Works in Opera and Safari browsers -->
+				<li><label for="rating">On a scale of 1 to 10, how excited are you to find a HotRod Show in your area?</label><input type="range" min="1" max = "10" id="rating" name="rating" type="range" />
+				</li>
+			</ul>
+			<ul>
 				<!-- Checkbox for email updates its a yes or no option -->
-					<li>
-						<label>Do you want to receive updates via email?</label>
-							<input type="checkbox" value="yes" id="yes_no" /> 
-							<input type="button" value = "See the answer" onclick = "is_it_checked();" /> 
-					</li>
-				</ul>
+				<li>
+					<label>Do you want to receive updates via email?</label>
+					<label for="yes">Yes</label><input type="checkbox" value="yes" id="yes_no" />
+					<label for="no">No</label><input type="checkbox" value="no" id="yes_no" /> 		
+				</li>
+			</ul>
 				<!-- Text Box for Comments -->	
 				<p id="comments">Additional Comments:</p>
 					<textarea rows="5" cols="30">Add comment here!</textarea>
