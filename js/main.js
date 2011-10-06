@@ -26,13 +26,10 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeOption.setAttribute("value", optText);
 					makeOption.innerHTML = optText;
 					makeSelect.appendChild(makeOption);
-					// Default Vars for my list of shows.
-			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-			
 		}
 			selectLi.appendChild(makeSelect);
 	}
-	makeList();
+	
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
@@ -125,6 +122,9 @@ window.addEventListener("DOMContentLoaded", function () {
 				return false;
 		}
 	}	
+		//My default variables
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		makeList();
 		// Set Link & Submit Click 
 			var displayLink = $('displayLink');
 			displayLink.addEventListener("click", getData);//execute a getData function
