@@ -14,9 +14,9 @@ window.addEventListener("DOMContentLoaded", function () {
 	} 	
 	
 	//Default variables
-		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-		var sexValue;
-		var updateValue = "no";
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"], 
+		var sexValue,
+		var updateValue = "No";
 		
 	//create select field element and populate options.
 		function makeList(){
@@ -37,17 +37,17 @@ window.addEventListener("DOMContentLoaded", function () {
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radio = document.forms[0].sex;
-			for(var i=0; i<radio.length; i++){
+		for(var i=0; i<radio.length; i++){
 			if(radio[i].checked){
-		var sexValue = radio[i].value;
+				sexValue = radio[i].value;
 			}
 		}
 	}
 		function getCheckBoxValue(){
-		if($('checkbox').checked){
-			updateValue = $('checkbox').value;
+			if($('checkBox').checked){
+				updateValue = $('checkBox').value;
 		}else{
-			updateValue = "no";
+			updateValue = "No";
 		}
 	}
 		/*function is_it_checked(){
@@ -88,6 +88,11 @@ window.addEventListener("DOMContentLoaded", function () {
 				item.fname  	= ["Full Name:", $('fname').value];
 				item.email  	= ["Email:", $('email').value];
 				item.userName 	= ["UserName:", $('username').value];
+				item.bday		= ["Birthdate:", $('bday').value;]
+
+				item.sex		= ["Sex:", sexValue];
+				item.updates	= ["Email Updates", updatesValue];
+				
 				item.rating		= ["Rating:", $('rating').value];
 				item.comments	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
