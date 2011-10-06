@@ -37,6 +37,20 @@ window.addEventListener("DOMContentLoaded", function () {
 					return true;
 			}
 		}
+		//validate email address
+		function validateEmail(address){
+		var email = 
+			if(address.indexOf("@")){
+				addressGood = "Valid Email."; //if email is valid, prints out valid email
+				return addressGood;
+				}else{
+					addressBad = "Invalid Email."; //if email is invalid, prints out invalid email
+					return addressBad;
+					}
+				};
+					var validEmail = validateEmail("");
+						console.log(vailidEmail); 
+	
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
