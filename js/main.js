@@ -12,9 +12,6 @@ window.addEventListener("DOMContentLoaded", function () {
 		var theElement = document.getElementById(x);
 		return theElement;	
 	} 	
-	
-	
-		
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
