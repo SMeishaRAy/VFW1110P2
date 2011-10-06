@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				item.notes	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
 			localStorage.setItem(id, JSON.stringify(item));
-				alert("Thank you. Your Information was Saved!");
+				alert("Thank you. Your Information was Submitted!");
 	}
 		function getData(){
 			toggleControls("on");
@@ -110,7 +110,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeList.appendChild(makeli);
 					var key = localStorage.key(i);
 					var value = localStorage.getItem(key);
-				//convert the string from local storage value back to an object by using JSON.parse().
+				//convert string from local storage value back to an object by using JSON.parse().
 					var obj = JSON.parse(value);
 					var makeSubList = document.createElement('ul');
 					makeli.appendChild(makeSubList);
