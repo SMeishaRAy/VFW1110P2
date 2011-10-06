@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
 			var	selectLi = $('select');
 			var makeSelect = document.createElement('select');
-				makeSelect.setAttribute("id", "groups");
+				makeSelect.setAttribute("id", "choices");
 		for(var i = 0, j = shows.length; i<j; i++){
 				var makeOption = document.createElement('option');
 				var optText = shows[i];
@@ -79,16 +79,17 @@ window.addEventListener("DOMContentLoaded", function () {
 	}
 		function storeData(){
 			var id 			= Math.floor(Math.random()*10900001);//local storage
-			//Gather up all of form field values and store in an object.
-			//Object properties contain an array with the form label and input values.
+		//Gather up all of form field values and store in an object.
+		//Object properties contain an array with the form label and input values.
 			getSelectedRadio();
 			getCheckBoxValue();
-			var item		= {};
-				item.fname  = ["Full Name:", $('fname').value];
-				item.email  = ["Email:", $('email').value];
-				item.user 	= ["UserName:", $('username').value];
-				item.rating	= ["Rating:", $('rating').value];
-				item.notes	= ["Comments:", $('comments').value];
+			var item			= {};
+				item.fname  	= ["Full Name:", $('fname').value];
+				item.email  	= ["Email:", $('email').value];
+				item.userName 	= ["UserName:", $('username').value];
+				item.choices= ["Choose One:", $('choices').value;]
+				item.rating		= ["Rating:", $('rating').value];
+				item.comments	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
 			localStorage.setItem(id, JSON.stringify(item));
 				alert("Thank you. Your Information was Submitted!");
