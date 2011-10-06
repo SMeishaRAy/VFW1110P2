@@ -50,14 +50,14 @@ window.addEventListener("DOMContentLoaded", function () {
 			updateValue = "no";
 		}
 	}
-		function is_it_checked(){
+		/*function is_it_checked(){
 			var y_n = document.getElementById("yes_no");
 			if (y_n.checked){
 			alert("Yes, The box is checked!");
 			}else{
 			alert("No, the box is not checked!");
 		}
-	}
+	}*/
 		function toggleControls(p){
 		switch(p){
 			case "on":
@@ -84,10 +84,10 @@ window.addEventListener("DOMContentLoaded", function () {
 			getSelectedRadio();
 			getCheckBoxValue();
 			var item			= {};
+				item.group		= ["HotRod Show:", $('groups').value];
 				item.fname  	= ["Full Name:", $('fname').value];
 				item.email  	= ["Email:", $('email').value];
 				item.userName 	= ["UserName:", $('username').value];
-				item.choices= ["Choose One:", $('choices').value;]
 				item.rating		= ["Rating:", $('rating').value];
 				item.comments	= ["Comments:", $('comments').value];
 			//Save data into Local Storage: Use Stringify to convert our object to a string.
