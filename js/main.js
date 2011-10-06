@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		return theElement;	
 	} 	
 	
-	//MyGlobal variables
+	//Default variables
 		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
 		var sexValue;
 		var updateValue = "no";
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				makeSelect.setAttribute("id", "groups");
 		for(var i = 0, j = shows.length; i<j; i++){
 				var makeOption = document.createElement('option');
-					var optText = shows[i];
+				var optText = shows[i];
 					makeOption.setAttribute("value", optText);
 					makeOption.innerHTML = optText;
 					makeSelect.appendChild(makeOption);
@@ -36,10 +36,10 @@ window.addEventListener("DOMContentLoaded", function () {
 		
 		//Find value of selected radio button.
 		function getSelectedRadio(){
-		var radios = document.forms[0].sex;
-			for(var i=0; i<radios.length; i++){
-			if(radios[i].checked){
-		var sexValue = radios[i].value;
+		var radio = document.forms[0].sex;
+			for(var i=0; i<radio.length; i++){
+			if(radio[i].checked){
+		var sexValue = radio[i].value;
 			}
 		}
 	}
@@ -47,19 +47,19 @@ window.addEventListener("DOMContentLoaded", function () {
 		if($('checkbox').checked){
 			updateValue = $('checkbox').value;
 		}else{
-			updateValue = "No";
+			updateValue = "no";
 		}
 	}
-		/*function is_it_checked(){
+		function is_it_checked(){
 			var y_n = document.getElementById("yes_no");
 			if (y_n.checked){
 			alert("Yes, The box is checked!");
 			}else{
 			alert("No, the box is not checked!");
 		}
-	}*/
-		function toggleControls(n){
-		switch(n){
+	}
+		function toggleControls(p){
+		switch(p){
 			case "on":
 				$('signup').style.display = "none";
 				$('clear').style.display = "inline";
