@@ -17,8 +17,8 @@ window.addEventListener("DOMContentLoaded", function () {
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
-				selectLi = $('select');
-				makeSelect = document.createElement('select');
+			var	selectLi = $('select');
+			var makeSelect = document.createElement('select');
 				makeSelect.setAttribute("id", "groups");
 			for(var i = 0, j = shows.length; i<j; i++){
 				var makeOption = document.createElement('option');
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		var radios = document.forms[0].sex;
 			for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
-				//sexValue = radios[i].value;
+		var sexValue = radios[i].value;
 			}
 		}
 	}
