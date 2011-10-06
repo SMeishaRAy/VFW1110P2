@@ -42,14 +42,7 @@ h2{
 	color: ff0000;
 }
 
-#yesupdates{ 
-	color: #444444;
-	font: italic bold 16px/1.4em "Times New Roman";
-	line-height: 1.4em;
-	letter-spacing: .09em;
-	text-align: left;
-}
-#signup {
+#signup a{
 	color: gray;
 	background: #FFC469;
 	-moz-border-radius: 15%;
