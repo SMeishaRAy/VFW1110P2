@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
-			var	selectLi = $('select');
+			var	shows = $('select');
 			var makeSelect = document.createElement('select');
 				makeSelect.setAttribute("id", "groups");
 			for(var i = 0, j = shows.length; i<j; i++){
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					makeOption.innerHTML = optText;
 					makeSelect.appendChild(makeOption);
 		}
-			selectLi.appendChild(makeSelect);
+			shows.appendChild(makeSelect);
 	}
 	
 		//Find value of selected radio button.
