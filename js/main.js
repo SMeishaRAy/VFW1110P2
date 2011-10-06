@@ -50,8 +50,8 @@ window.addEventListener("DOMContentLoaded", function () {
 			alert("Yes, The box is checked!");
 			}else{
 			alert("No, the box is not checked!");
-			}
 		}
+	}
 		function toggleControls(n){
 		switch(n){
 			case "on":
@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			toggleControls("on");
 				if(localStorage.length === 0){
 					alert("There is no data in local storage.");
-				}
+	}
 			//Write Data rom Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
@@ -125,12 +125,13 @@ window.addEventListener("DOMContentLoaded", function () {
 				alert("All data has been removed from local storage!");
 				window.location.reload();
 				return false;
-		}
-	}	
+			}
+		}	
 		//My default variables
 		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
 		sexValue;
 		makeList();
+		
 		// Set Link & Submit Click 
 			var displayLink = $('displayLink');
 			displayLink.addEventListener("click", getData);//execute a getData function
