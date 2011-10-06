@@ -27,6 +27,16 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 			selectLi.appendChild(makeSelect);
 	}
+		//Checking to make that the name field was not left blank.
+		function checkIt(){
+			var theName = document.getElementById("fname").value;
+				if(theName.length < 1) {
+					window.alert("Please enter your first name.");
+					return false; 
+				}else{
+					return true;
+			}
+		}
 		//Find value of selected radio button.
 		function getSelectedRadio(){
 		var radios = document.forms[0].sex;
