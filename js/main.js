@@ -13,10 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		return theElement;	
 	} 	
 	
-	//Default variables
-		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-		var sexValue;
-		var updateValue = "no";
+	
 		
 	//create select field element and populate options.
 		function makeList(){
@@ -126,8 +123,9 @@ window.addEventListener("DOMContentLoaded", function () {
 		
 		function clearLocal(){
 			if(localStorage.length === 0){
-				alert("There is no data to clear.");
-			}else{
+				alert("Sorry! There is no data to clear.");
+			}
+			else{
 				localStorage.clear();
 				alert("All data has been removed from local storage!");
 				window.location.reload();
@@ -135,17 +133,31 @@ window.addEventListener("DOMContentLoaded", function () {
 			}
 		}	
 		
-		makeList();
-		
-		// Set Link & Submit Click 
+		//Default variables - creates the dropdown menu!
+			var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"],
+				sexValue;
+				updateValue = "no";			
+			makeList();
+			//Save Data function
+				var save = $('submit');
+				save.addEventListener("click", storeData);
+					
+		// Display data 
 			var displayLink = $('displayLink');
-			displayLink.addEventListener("click", getData);//execute a getData function
+			displayLink.addEventListener("click", getData);		
 			
+			//Clears all data!
 			var clearLink = $('clear');
 			clearLink.addEventListener("click", clearLocal);//clears all data
 			
-			var save = $('submit');
-			save.addEventListener("click", storeData);//Save Data function
+			
+			/*Sign up - function does not work for now.
+			var signup = $("signup");
+			signup.addEventListener("click", getSignup);
+			
+			//Login - function does not work for now.
+			var login = $("login");
+			login.addEventListener("click", logIn);*/
 			
 });	
 
