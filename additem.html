@@ -67,8 +67,6 @@
 				<li id="select">
 					<label for ="dropdown">Select a Show:</label> 
 				</li>
-						
-				
 				</ul>
 				<ul>
 				<!-- This is a slider, but doesn't slide on FireFox. Only shows a text box. Works in Opera and Safari browsers -->
@@ -77,9 +75,11 @@
 					</li>
 				</ul>
 				<ul>
-				<!-- email updates -->
+				<!-- Checkbox for email updates its a yes or no option -->
 					<li>
-						<input type="checkbox" name="yes" value="yes" id="checkbox" class="checkbox" >  Do you want to receive updates via email?
+						<label>Do you want to receive updates via email?</label>
+							<input type="checkbox" value="yes" id="yes_no" /> 
+							<input type="button" value = "See the answer" onclick = "is_it_checked();" /> 
 					</li>
 				</ul>
 				<!-- Text Box for Comments -->	

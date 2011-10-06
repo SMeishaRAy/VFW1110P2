@@ -46,13 +46,23 @@ window.addEventListener("DOMContentLoaded", function () {
 			}
 		}
 	}
-		function getCheckBoxValue(){
+		/*function getCheckBoxValue(){
 		if($('checkbox').checked){
 			//updateValue = $('checkbox').value;
 		}else{
 			//updateValue = "No";
 		}
-	}
+	}*/
+	
+		function is_it_checked(){
+			var y_n = document.getElementById("yes_no");
+			if (y_n.checked){
+			alert("Yes, The box is checked!");
+			}else{
+			alert("No, the box is not checked!");
+			}
+		}
+		
 		function toggleControls(n){
 		switch(n){
 			case "on":
