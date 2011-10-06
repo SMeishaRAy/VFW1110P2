@@ -79,8 +79,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			getSelectedRadio();
 			getCheckBoxValue();
 			var item		= {};
-				item.fname  = ["First Name:", $('fname').value];
-				item.lname  = ["Last Name:", $('lname').value];
+				item.fname  = ["Name:", $('fname').value];
 				item.email  = ["Email:", $('email').value];
 				item.user 	= ["UserName:", $('username').value];
 				item.rating	= ["Rating:", $('rating').value];
