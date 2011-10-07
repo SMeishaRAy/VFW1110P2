@@ -5,7 +5,7 @@
 */
 
 //DOM - method when the dom has loaded it will run this function.
-window.addEventListener("DOMContentLoaded", function () { 
+window.addEventListener("DOMContentLoaded", function() { 
 	
 
 	//get element by id function. shortcut
@@ -72,13 +72,13 @@ window.addEventListener("DOMContentLoaded", function () {
 			getSelectedRadio();
 			getCheckBoxValue();
 			var item			= {};
-				item.group		= ["HotRod Show:", $('groups').value];
+				item.group		= ["HotRod Show:", $('choices').value];
 				item.fname  	= ["Full Name:", $('fname').value];
 				item.email  	= ["Email:", $('email').value];
 				item.userName 	= ["UserName:", $('username').value];
 				item.bday		= ["Birthdate:", $('bday').value];
 				item.sex		= ["Sex:", sexValue];
-				item.updates	= ["Email Updates", updatesValue];
+				item.updates	= ["Email Updates", updateValue];
 				item.rating		= ["Rating:", $('rating').value];
 				item.comments	= ["Comments:", $('comments').value];
 			
