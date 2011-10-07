@@ -14,12 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		return theElement;	
 	} 	
 	
-	//Default variables
-		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
-		var	sexValue;
-		var updateValue = "No";
-		
-	//create select field element and populate options.
+		//create select field element and populate options.
 		function makeList(){
 			var formTag = document.getElementsByTagName("form");//formTag is an array of all form tags.
 			var	selectLi = $('select');
@@ -51,16 +46,8 @@ window.addEventListener("DOMContentLoaded", function () {
 			updateValue = "No";
 		}
 	}
-		/*function is_it_checked(){
-			var y_n = document.getElementById("yes_no");
-			if (y_n.checked){
-			alert("Yes, The box is checked!");
-			}else{
-			alert("No, the box is not checked!");
-		}
-	}*/
-		function toggleControls(p){
-		switch(p){
+		function toggleControls(n){
+		switch(n){
 			case "on":
 				$('signup').style.display = "none";
 				$('clear').style.display = "inline";
@@ -94,15 +81,15 @@ window.addEventListener("DOMContentLoaded", function () {
 				item.updates	= ["Email Updates", updatesValue];
 				item.rating		= ["Rating:", $('rating').value];
 				item.comments	= ["Comments:", $('comments').value];
-			//Save data into Local Storage: Use Stringify to convert our object to a string.
+			
 			localStorage.setItem(id, JSON.stringify(item));
-				alert("Thank you. Your Information was Submitted!");
+			alert("Thank you. Your Information was Submitted!");
 	}
 		function getData(){
 			toggleControls("on");
-				if(localStorage.length === 0){
-					alert("There is no data in local storage.");
-					}
+			if(localStorage.length === 0){
+			alert("There is no data in local storage.");
+	}
 			//Write Data from Local Storage to the browser. 
 			var makeDiv = document.createElement('div');
 			makeDiv.setAttribute("id", "items");
@@ -110,7 +97,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			makeDiv.appendChild(makeList);
 			document.body.appendChild(makeDiv);	
 			$('items').style.display = "block";
-				for(var i=0, len=localStorage.length; i<len; i++){
+			for(var i=0, len=localStorage.length; i<len; i++){
 					var makeli = document.createElement('li');
 					makeList.appendChild(makeli);
 					var key = localStorage.key(i);
@@ -120,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					var makeSubList = document.createElement('ul');
 					makeli.appendChild(makeSubList);
 					for(var n in obj){
-						var makeSubLi = document.createElement('li');
+					var makeSubLi = document.createElement('li');
 						makeSubList.appendChild(makeSubLi);
 						var optSubText = obj[n][0]+" "+obj[n][1];
 						makeSubLi.innerHTML = optSubText;
@@ -130,15 +117,19 @@ window.addEventListener("DOMContentLoaded", function () {
 		
 		function clearLocal(){
 			if(localStorage.length === 0){
-				alert("There is no data to clear.");
+			alert("There is no data to clear.");
 			}else{
-				localStorage.clear();
-				alert("All data has been removed from local storage!");
-				window.location.reload();
-				return false;
+			localStorage.clear();
+			alert("All data has been removed from local storage!");
+			window.location.reload();
+			return false;
 			}
 		}	
 		
+		//Default variables
+		var shows = ["--Choose One--", "Chevy", "Corvette", "Camaro", "Ford", "Mopar", "Tuner", "Antique", "Classic", "Low-Riders", "Lifted-Rides"]; 
+		var	sexValue;
+		var updateValue = "No";
 		makeList();
 		
 		// Set Link & Submit Click 
